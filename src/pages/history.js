@@ -42,7 +42,7 @@ const History = ({}) => {
 
   useEffect(() => {
     if (historyState) {
-      path.push("/", { fromHistory: true });
+      path.push({ pathname: "/", state: { fromHistory: true } });
     }
 
     return () => {

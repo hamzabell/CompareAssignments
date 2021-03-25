@@ -55,6 +55,9 @@ const Home = () => {
       toast.error("An Error occurred while running this query");
     }
   };
+  console.log(location);
+
+  console.log(location.state, clearState);
   return (
     <div className="mb-10">
       <div className="flex justify-between md:mt-20 md:mx-20 mx-5 mt-10">
@@ -73,7 +76,7 @@ const Home = () => {
             </button>
           )}
 
-          {location.state && location.state.fromHistory && !clearState && (
+          {location.state && !clearState && (
             <button
               onClick={() => reRun()}
               className="cursor-pointer  md:flex md:justify-center md:items-center border border-green-500 text-green-500 px-5 rounded font-semibold transform hover:scale-110 hover:font-bold pb-1"
@@ -123,7 +126,7 @@ const Home = () => {
             className="w-5 h-5  text-black"
             onClick={() => history.push("/history")}
           />
-          {location.state && location.state.fromHistory && !clearState && (
+          {location.state && !clearState && (
             <FaPlay
               className="w-5 h-5 mx-2 text-green-500"
               onClick={() => reRun()}
