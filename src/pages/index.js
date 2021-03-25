@@ -116,7 +116,7 @@ const Home = () => {
           {(clearState || !location.state) && (
             <BiGitCompare
               className="w-5 h-5  text-black"
-              onClick={() => history.goBack()}
+              onClick={() => compare()}
             />
           )}
           <FaHistory
