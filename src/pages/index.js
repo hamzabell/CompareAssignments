@@ -56,7 +56,7 @@ const Home = () => {
     }
   };
   return (
-    <div className="">
+    <div className="mb-10">
       <div className="flex justify-between md:mt-20 md:mx-20 mx-5 mt-10">
         <h1 className="text-gray-400  md:text-2xl text-lg uppercase text-wrap">
           Compare Assignments
